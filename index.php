@@ -8,13 +8,11 @@
 
 <?php
 include 'create-payment.php';
-include 'retrieve-payment.php';
-
 
 if (isset($response)) {
     $responseData = json_decode($response, true);
 
-    if ($responseData) {
+    if ($responseData && isset($responseData['id'])) {
         // Afficher les informations de base
         echo "ID de Paiement: " . htmlspecialchars($responseData['id']) . "<br>";
         echo "Montant: " . htmlspecialchars(number_format($responseData['purchase_amount'] / 100, 2)) . " €<br>";
@@ -36,6 +34,9 @@ if (isset($response)) {
         if (isset($responseData['shipping_address'])) {
             echo "Adresse de Livraison: " . htmlspecialchars($responseData['shipping_address']['line1']) . ", " . htmlspecialchars($responseData['shipping_address']['postal_code']) . " " . htmlspecialchars($responseData['shipping_address']['city']) . "<br>";
         }
+
+        // Envoyer le lien de paiement par e-mail
+        include 'send-payment-link-email.php';
     } else {
         echo "<p>Erreur lors du traitement des données de paiement.</p>";
     }
