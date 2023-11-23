@@ -1,6 +1,6 @@
 <?php
 $apiKey = 'sk_test_5J16u06fUG3BNa0j9lizte35';
-$paymentId = 'payment_11xrOhp4DjpbSZid8BlOTPffocihu7RbYf';
+$paymentId = 'payment_11xrgRi1FN6p1yiyWbab5lOMbGH9m2HyIk';
 
 $url = "https://api.sandbox.getalma.eu/v1/payments/{$paymentId}/send-email";
 

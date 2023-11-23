@@ -1,7 +1,7 @@
 <?php
 $apiKey = 'sk_test_5J16u06fUG3BNa0j9lizte35';
 
-$paymentId = 'payment_11xrOhp4DjpbSZid8BlOTPffocihu7RbYf';
+$paymentId = 'payment_11xrgXw6wVdac5oVur5rt2b9IIunp1Taa5';
 
 $url = "https://api.sandbox.getalma.eu/v1/payments/{$paymentId}";
 
@@ -19,5 +19,5 @@ if ($response === FALSE) {
     die("Erreur lors de la récupération du paiement");
 }
 
-//echo $response;
+echo $response;
 ?>

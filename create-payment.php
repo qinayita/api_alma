@@ -40,5 +40,5 @@ if ($response === FALSE) {
     die("Erreur lors de la requête");
 }
 
-//echo $response;
+echo $response;
 ?>

@@ -36,6 +36,7 @@ if (isset($response)) {
         }
 
         // Envoyer le lien de paiement par e-mail
+
         include 'send-payment-link-email.php';
     } else {
         echo "<p>Erreur lors du traitement des données de paiement.</p>";
